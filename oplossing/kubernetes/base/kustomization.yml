@@ -12,6 +12,6 @@ resources:
 commonLabels:
   app: pe2-app
 
-patchesStrategicMerge:
-- argocd-repo-server-deploy.yml
-- argocd-cm.yml
+# patchesStrategicMerge:
+# - argocd-repo-server-deploy.yml
+# - argocd-cm.yml
