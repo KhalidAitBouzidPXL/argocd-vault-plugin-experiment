@@ -1,7 +1,7 @@
 resources:
   - ../../base
 
-namespace: argocd
+namespace: testsbamtut
 
 patches:
 - path: patch-angular.yml
