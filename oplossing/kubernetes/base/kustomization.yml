@@ -6,7 +6,7 @@ resources:
   - mongodb-deployment.yml
   - mongodb-service.yml
   - https://github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.7.9
-  - argocd-vault-plugin-secret.yml
+  # - argocd-vault-plugin-secret.yml
   - secret.yml
 
 commonLabels:
