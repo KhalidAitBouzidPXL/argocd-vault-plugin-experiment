@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-server-deployment
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - name: spring-boot-server-container
+        resources:
+          limits:
+            memory: "1500Mi"

@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-server-deployment
+spec:
+  template:
+    spec:
+      containers:
+      - name: spring-boot-server-container
+        image: ghcr.io/pxl-systems-expert/kubernetes-pe2-khalidaitbouzidpxl/spring-boot-server
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: ghcr

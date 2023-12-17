@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-client-deployment
+spec:
+  template:
+    spec:
+      containers:
+      - name: angular-client-container
+        image: ghcr.io/pxl-systems-expert/kubernetes-pe2-khalidaitbouzidpxl/angular-14-client
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: ghcr

@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-client-deployment
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - name: angular-client-container
+        resources:
+          limits:
+            memory: "1500Mi"

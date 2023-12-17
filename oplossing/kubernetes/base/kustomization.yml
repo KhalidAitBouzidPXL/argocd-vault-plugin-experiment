@@ -1,0 +1,16 @@
+resources:
+  - angular-client-deployment.yml
+  - angular-client-service.yml
+  - spring-boot-server-deployment.yml
+  - spring-boot-server-service.yml
+  - mongodb-deployment.yml
+  - mongodb-service.yml
+  - https://github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.7.9
+  - secret.yml
+
+commonLabels:
+  app: pe2-app
+
+patchesStrategicMerge:
+- argocd-repo-server-deploy.yml
+- argocd-cm.yml

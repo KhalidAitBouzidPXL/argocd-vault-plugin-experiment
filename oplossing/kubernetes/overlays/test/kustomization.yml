@@ -1,0 +1,24 @@
+resources:
+  - ../../base
+
+namespace: testsbamtut
+
+patches:
+- path: patch-angular.yml
+  target:
+    kind: Deployment
+    name: angular-client-deployment
+- path: patch-spring-boot.yml
+  target:
+    kind: Deployment
+    name: spring-boot-server-deployment
+- path: patch-mongodb.yml
+  target:
+    kind: Deployment
+    name: mongodb-deployment
+
+images:
+- name: ghcr.io/pxl-systems-expert/kubernetes-pe2-khalidaitbouzidpxl/angular-14-client
+  newTag: 'TEST_v0.0.51'
+- name: ghcr.io/pxl-systems-expert/kubernetes-pe2-khalidaitbouzidpxl/spring-boot-server
+  newTag: 'TEST_v0.0.51'
