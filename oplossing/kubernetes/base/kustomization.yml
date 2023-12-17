@@ -7,7 +7,7 @@ resources:
   - mongodb-service.yml
   # - https://github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.7.9
   # - argocd-vault-plugin-secret.yml
-  # - secret.yml
+  - secret.yml
 
 commonLabels:
   app: pe2-app
